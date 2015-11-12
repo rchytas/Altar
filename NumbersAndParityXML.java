@@ -53,7 +53,7 @@ public class NumbersAndParityXML {
 		try {
 			xmlFile = new File(xmlFileName);
 			fop = new FileOutputStream(xmlFile);
-			// if file doesn't exists, then create it
+			// if file doesn't exist, then create it
 			if (!xmlFile.exists()) {
 				xmlFile.createNewFile();
 			}
