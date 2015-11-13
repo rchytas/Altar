@@ -1,3 +1,8 @@
+/**
+ * Requires Protege 4.2
+ * @author Rchytas
+ ** 
+/
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileWriter;
