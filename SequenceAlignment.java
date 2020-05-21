@@ -59,7 +59,7 @@ public class SequenceAlignment {
 	 * Main entry point for sequence alignment.
 	 */
 	public static void main(String[] args) {
-		SeqAlignment alignSequences = new SeqAlignment();
+		SequenceAlignment alignSequences = new SequenceAlignment();
 		alignSequences.run(args);
 	}
 
