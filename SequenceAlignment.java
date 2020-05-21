@@ -55,6 +55,11 @@ public class SequenceAlignment {
 	private static float[][] TrackMatrix;
 
 
+/**
+* Sample class for demostrating sequence alignment problem solution.
+* Not a complete or elegant work, but can be used as good starting point.
+*/
+
 	/**
 	 * Main entry point for sequence alignment.
 	 */
