@@ -8,7 +8,10 @@ import org.kohsuke.args4j.CmdLineParser;
 import org.kohsuke.args4j.Option;
 
 /**
-* @author rchytas
+*	Sample class for demostrating sequence alignment problem solution.
+* 	Not a complete or elegant work, but can be used as good starting point. 
+*	
+*	@author rchytas
 *
 **/
 
@@ -53,12 +56,6 @@ public class SequenceAlignment {
 	private static float[][] Iy;
 	private static float[][] ScoreMatrix;
 	private static float[][] TrackMatrix;
-
-
-/**
-* Sample class for demostrating sequence alignment problem solution.
-* Not a complete or elegant work, but can be used as good starting point.
-*/
 
 	/**
 	 * Main entry point for sequence alignment.
