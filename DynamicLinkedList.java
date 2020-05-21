@@ -1,5 +1,3 @@
-package linkedLists;
-
 import java.util.Scanner;
 
 /**
