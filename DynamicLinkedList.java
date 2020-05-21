@@ -35,6 +35,8 @@ public class DynamicLinkedList<E> {
 			ch = sc.next().charAt(0);
 		}
 
+		System.out.println("Your list after adding all the nodes ");
+
 		// Adding nodes done, now print the list
 		myDemoList.display();
 
