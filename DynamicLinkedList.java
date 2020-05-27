@@ -1,3 +1,5 @@
+package linkedLists;
+
 import java.util.Scanner;
 
 /**
@@ -38,8 +40,11 @@ public class DynamicLinkedList<E> {
 		// Adding nodes done, now print the list
 		myDemoList.display();
 
+		System.out.println("And its length is -> " + myDemoList.getLength());
+
 		System.out.println();
 
+		
 		// Now add a node at specified position
 		System.out.println("Please enter the position where you want to add the node : ");
 		int insertPos = sc.nextInt();
@@ -56,6 +61,10 @@ public class DynamicLinkedList<E> {
 
 		System.out.println();
 
+		System.out.println("And its length is -> " + myDemoList.getLength());
+
+		System.out.println();
+
 		// Now add a node at specified position
 		System.out.println("Please enter the position from where you want to delete the node : ");
 		int deletePos = sc.nextInt();
@@ -65,7 +74,20 @@ public class DynamicLinkedList<E> {
 		System.out.println("Your list after deleting a node");
 
 		myDemoList.display();
+		
+		System.out.println();
 
+		System.out.println("And its length is -> " + myDemoList.getLength());
+		
+		System.out.println();
+		
+		System.out.println("Now reversing your list ");
+		
+		myDemoList.reverse();
+		
+		System.out.println();
+
+		myDemoList.display();
 	}
 
 	/**
@@ -151,6 +173,47 @@ public class DynamicLinkedList<E> {
 	}
 
 	/**
+	 * Returns the length of a LinkedList
+	 * 
+	 * @return
+	 */
+	public int getLength() {
+		int len = 0;
+		Node<Integer> temp = start;
+
+		// Empty list
+		if (start == null)
+			return len;
+
+		// Iteratively calculate the length
+		while (temp != null) {
+			temp = temp.next;
+			len++;
+		}
+		return len;
+	}
+
+	/**
+	 * Reverses a LinkedList
+	 * 
+	 * @return
+	 */
+	public void reverse() {
+		Node<Integer> prevNode = null;
+		Node<Integer> current = start;
+		Node<Integer> nextNode = start;
+
+		// Iteratively reverse the list
+		while (nextNode != null) {
+			nextNode = nextNode.next;
+			current.next = prevNode; 
+			prevNode = current; 
+			current = nextNode;
+		}
+		start = prevNode;
+	}	
+	
+	/**
 	 * The Node class for my dynamic LinkedList
 	 * 
 	 * @author mpandit
@@ -168,8 +231,8 @@ public class DynamicLinkedList<E> {
 }
 
 /**
- *		A sample run of above program is below -
- 
+ * A sample run of above program is below -
+ * 
 		Enter data for the node : 
 		11
 		Press (Y/y) to add another node : 
@@ -186,15 +249,25 @@ public class DynamicLinkedList<E> {
 		55
 		Press (Y/y) to add another node : 
 		n
-		LL Node 1 has data -> 11 LL Node 2 has data -> 22 LL Node 3 has data -> 44 LL Node 4 has data -> 55 
+		Your list after adding all the nodes 
+		LL Node 1 has data -> 11 LL Node 2 has data -> 22 LL Node 3 has data -> 44 LL Node 4 has data -> 55 And its length is -> 4
+		
 		Please enter the position where you want to add the node : 
 		3
 		Please enter data for new node : 
 		33
 		Your list after inserting a new node
 		LL Node 1 has data -> 11 LL Node 2 has data -> 22 LL Node 3 has data -> 33 LL Node 4 has data -> 44 LL Node 5 has data -> 55 
+		And its length is -> 5
+		
 		Please enter the position from where you want to delete the node : 
-		4
+		3
 		Your list after deleting a node
-		LL Node 1 has data -> 11 LL Node 2 has data -> 22 LL Node 3 has data -> 33 LL Node 4 has data -> 55  
-**/
+		LL Node 1 has data -> 11 LL Node 2 has data -> 22 LL Node 3 has data -> 44 LL Node 4 has data -> 55 
+		And its length is -> 4
+		
+		Now reversing your list 
+		
+		LL Node 1 has data -> 55 LL Node 2 has data -> 44 LL Node 3 has data -> 22 LL Node 4 has data -> 11 
+ *
+ **/
