@@ -1,4 +1,4 @@
-package linkedLists;
+package com.rchytas.dsa;
 
 import java.util.Scanner;
 

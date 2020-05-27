@@ -1,3 +1,4 @@
+package com.rchytas.utilities;
 /**
  * Example of Javadeadlock.
  * @author Rchytas

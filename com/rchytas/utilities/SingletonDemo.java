@@ -1,3 +1,4 @@
+package com.rchytas.utilities;
 public class SingletonDemo {
 
 	// the static singleton object
