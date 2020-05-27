@@ -169,7 +169,6 @@ public class DynamicLinkedList<E> {
 		temp = temp.next;
 		old.next = null;
 		old = null;
-
 	}
 
 	/**
@@ -205,10 +204,10 @@ public class DynamicLinkedList<E> {
 
 		// Iteratively reverse the list
 		while (nextNode != null) {
-			nextNode = nextNode.next;
-			current.next = prevNode; 
-			prevNode = current; 
-			current = nextNode;
+			nextNode = nextNode.next; // got both nodes
+			current.next = prevNode; // break the link by pointing current's next to previous / null
+			prevNode = current; // make current node previous
+			current = nextNode; // make next node current for 'next iteration'
 		}
 		start = prevNode;
 	}	
