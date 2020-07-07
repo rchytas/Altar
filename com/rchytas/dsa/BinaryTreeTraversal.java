@@ -4,12 +4,12 @@ package com.rchytas.dsa;
 
 /* Class containing left and right child of current 
 node and key value*/
-class NodeThis 
+class Node 
 { 
 	int key; 
-	NodeThis left, right; 
+	Node left, right; 
 
-	public NodeThis(int item) 
+	public Node(int item) 
 	{ 
 		key = item; 
 		left = right = null; 
@@ -19,7 +19,7 @@ class NodeThis
 public class  BinaryTreeTraversal 
 { 
 	// Root of Binary Tree 
-	NodeThis root; 
+	Node root; 
 
 	BinaryTreeTraversal() 
 	{ 
@@ -28,7 +28,7 @@ public class  BinaryTreeTraversal
 
 	/* Given a binary tree, print its nodes according to the 
 	"bottom-up" postorder traversal. */
-	void printPostorder(NodeThis node) 
+	void printPostorder(Node node) 
 	{ 
 		if (node == null) 
 			return; 
@@ -44,7 +44,7 @@ public class  BinaryTreeTraversal
 	} 
 
 	/* Given a binary tree, print its nodes in inorder*/
-	void printInorder(NodeThis node) 
+	void printInorder(Node node) 
 	{ 
 		if (node == null) 
 			return; 
@@ -60,7 +60,7 @@ public class  BinaryTreeTraversal
 	} 
 
 	/* Given a binary tree, print its nodes in preorder*/
-	void printPreorder(NodeThis node) 
+	void printPreorder(Node node) 
 	{ 
 		if (node == null) 
 			return; 
@@ -92,7 +92,7 @@ public class  BinaryTreeTraversal
     /* Compute the "height" of a tree -- the number of 
     nodes along the longest path from the root node 
     down to the farthest leaf node.*/
-    int height(NodeThis root) 
+    int height(Node root) 
     { 
         if (root == null) 
            return 0; 
@@ -110,7 +110,7 @@ public class  BinaryTreeTraversal
     } 
   
     /* Print nodes at the given level */
-    void printGivenLevel (NodeThis root ,int level) 
+    void printGivenLevel (Node root ,int level) 
     { 
         if (root == null) 
             return; 
@@ -126,29 +126,39 @@ public class  BinaryTreeTraversal
 	public static void main(String[] args) 
 	{ 
 		BinaryTreeTraversal tree = new BinaryTreeTraversal(); 
-		tree.root = new NodeThis(1); 
-		tree.root.left = new NodeThis(2); 
-		tree.root.right = new NodeThis(3); 
-		tree.root.left.left = new NodeThis(4); 
-		tree.root.left.right = new NodeThis(5); 
+		tree.root = new Node(1); 
+		tree.root.left = new Node(2); 
+		tree.root.right = new Node(3); 
+		tree.root.left.left = new Node(4); 
+		tree.root.left.right = new Node(5); 
+		System.out.println("   1");
+		System.out.println(" /   \\");
+		System.out.println(" 2     3");
+		System.out.println("/ \\");       
+		System.out.println("4  5"); 
 
-		System.out.println("Preorder traversal of binary tree is "); 
-		tree.printPreorder(); 
+		System.out.println("Preorder (root * left * right) traversal of binary tree is  "); 
+		tree.printPreorder();  
 
-		System.out.println("\nInorder traversal of binary tree is "); 
+		System.out.println("\nInorder (left * root * right) traversal of binary tree is "); 
 		tree.printInorder(); 
 
-		System.out.println("\nPostorder traversal of binary tree is "); 
+		System.out.println("\nPostorder (left * right * root) traversal of binary tree is "); 
 		tree.printPostorder(); 
 		
-	    System.out.println("\nLevel order traversal of binary tree is "); 
+	    System.out.println("\nLevel (root * level1 * level2) order traversal of binary tree is "); 
 		tree.printLevelOrder(); 
 	} 
 } 
 
 /**
  * Sample output of above program is below -
- * 
+ *       1
+ *      / \
+ *     2   3
+ *   /   \       
+ *  4     5       
+ *       
  * 	Preorder traversal of binary tree is 
  *	1 2 4 5 3 
  *	Inorder traversal of binary tree is 
