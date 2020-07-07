@@ -159,13 +159,13 @@ public class  BinaryTreeTraversal
  *   /   \       
  *  4     5       
  *       
- * 	Preorder traversal of binary tree is 
+ *	Preorder (root * left * right) traversal of binary tree is  
  *	1 2 4 5 3 
- *	Inorder traversal of binary tree is 
+ *	Inorder (left * root * right) traversal of binary tree is 
  *	4 2 5 1 3 
- *	Postorder traversal of binary tree is 
+ *	Postorder (left * right * root) traversal of binary tree is 
  *	4 5 2 3 1 
- *	Level order traversal of binary tree is 
+ *	Level (root * level1 * level2) order traversal of binary tree is 
  *	1 2 3 4 5 
  * 
 **/
