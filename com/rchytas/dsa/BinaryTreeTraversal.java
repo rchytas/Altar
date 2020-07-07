@@ -190,6 +190,8 @@ public class  BinaryTreeTraversal
  *	Postorder (left * right * root) traversal of binary tree is 
  *	4 5 2 3 1 
  *	Level (root * level1 * level2) order traversal of binary tree is 
- *	1 2 3 4 5 
+ *	1 
+ *	2 3 
+ *	4 5 
  * 
 **/
