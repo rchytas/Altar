@@ -1,5 +1,8 @@
 package com.rchytas.dsa;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 //Java program for different tree traversals 
 
 /* Class containing left and right child of current 
@@ -79,8 +82,9 @@ public class  BinaryTreeTraversal
 	void printPostorder() {	 printPostorder(root); } 
 	void printInorder() {	 printInorder(root); } 
 	void printPreorder() {	 printPreorder(root); } 
+	void printLeverorder() {	 printLevelOrder(root); } 
 
-	/* function to print level order traversal of tree*/
+	/**
     void printLevelOrder() 
     { 
         int h = height(root); 
@@ -89,27 +93,21 @@ public class  BinaryTreeTraversal
             printGivenLevel(root, i); 
     } 
   
-    /* Compute the "height" of a tree -- the number of 
-    nodes along the longest path from the root node 
-    down to the farthest leaf node.*/
     int height(Node root) 
     { 
         if (root == null) 
            return 0; 
         else
         { 
-            /* compute  height of each subtree */
             int lheight = height(root.left); 
             int rheight = height(root.right); 
               
-            /* use the larger one */
             if (lheight > rheight) 
                 return(lheight+1); 
             else return(rheight+1);  
         } 
     } 
   
-    /* Print nodes at the given level */
     void printGivenLevel (Node root ,int level) 
     { 
         if (root == null) 
@@ -122,6 +120,32 @@ public class  BinaryTreeTraversal
             printGivenLevel(root.right, level-1); 
         } 
     } 
+    **/
+    void printLevelOrder(Node root){
+    	if (root == null)
+    		return;
+    	
+    	Queue<Node> q = new LinkedList<Node>();
+    	
+    	q.add(root);
+    	
+    	while (true) {
+    		int nodeCount = q.size();
+    		if (nodeCount == 0) break;
+    		
+    		while (nodeCount > 0) {
+    			Node node = q.peek();   			
+    			System.out.print(node.key + " ");
+    			q.remove();
+    			if (node.left != null) q.add(node.left);
+    			if (node.right != null) q.add(node.right);
+    			nodeCount--;
+    		}
+    		System.out.println();
+    	}
+    	
+    	
+    }
 	// Driver method 
 	public static void main(String[] args) 
 	{ 
@@ -147,7 +171,7 @@ public class  BinaryTreeTraversal
 		tree.printPostorder(); 
 		
 	    System.out.println("\nLevel (root * level1 * level2) order traversal of binary tree is "); 
-		tree.printLevelOrder(); 
+		tree.printLeverorder(); 
 	} 
 } 
 
