@@ -145,3 +145,17 @@ public class  BinaryTreeTraversal
 		tree.printLevelOrder(); 
 	} 
 } 
+
+/**
+ * Sample output of above program is below -
+ * 
+ * 	Preorder traversal of binary tree is 
+ *	1 2 4 5 3 
+ *	Inorder traversal of binary tree is 
+ *	4 2 5 1 3 
+ *	Postorder traversal of binary tree is 
+ *	4 5 2 3 1 
+ *	Level order traversal of binary tree is 
+ *	1 2 3 4 5 
+ * 
+**/
