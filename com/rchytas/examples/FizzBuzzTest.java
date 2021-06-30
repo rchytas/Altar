@@ -9,7 +9,9 @@ import org.junit.Test;
  * print “Fizz” instead of the number and for the multiples of 5 print “Buzz“.
  * For numbers which are multiples of both 3 and 5 print “FizzBuzz”.
  * 
- * Also, provide Unit Test for the program
+ * Also, provide Unit Test for the program.
+ * 
+ * Some stupid people ask this in interviews.
  * 
  * @author mpandit
  *
@@ -25,7 +27,7 @@ public class FizzBuzzTest {
 		assertEquals("Fizz", fizzBuzz(9));
 		assertEquals("Buzz", fizzBuzz(5));
 		assertEquals("Buzz", fizzBuzz(10));
-		//assertEquals("Buzz", fizzBuzz(15));
+		// assertEquals("Buzz", fizzBuzz(15));
 		assertEquals("FizzBuzz", fizzBuzz(15));
 		int n = 100;
 		printMe(n);
