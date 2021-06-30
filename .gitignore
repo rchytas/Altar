@@ -10,4 +10,5 @@
 /SequenceAlignment.class
 /FizzBuzzTest.class
 .DS_Store
+*.class
 /SingletonDemo.class
