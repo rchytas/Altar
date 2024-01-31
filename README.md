@@ -6,4 +6,4 @@ Always first project in a new development environment (some mundane stuff). Most
 
 *Computing is to Biology what Mathematics is to Physics*
 
-*Science is the cradle of human civilization, if we did not have Science we would have been like the Apes in the jungle*
+*Science is the cradle of human civilization, if we did not have Science we would have been like the Apes in jungle*
